@@ -1,0 +1,12 @@
+---
+import { consts } from '../consts';
+import BaseLayout from '../layout/base-layout.astro';
+
+// Welcome to Astro! Everything between these triple-dash code fences
+// is your "component frontmatter". It never runs in the browser.
+console.log('This runs in your terminal, not the browser!');
+---
+
+<BaseLayout title={consts.SITE_TITLE} description={consts.SITE_DESCRIPTION}>
+  <h1>Hello</h1>
+</BaseLayout>
