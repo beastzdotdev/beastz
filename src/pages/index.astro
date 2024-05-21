@@ -1,12 +1,88 @@
 ---
 import { consts } from '../consts';
 import BaseLayout from '../layout/base-layout.astro';
-
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component frontmatter". It never runs in the browser.
-console.log('This runs in your terminal, not the browser!');
+import Logo from '../assets/logo.svg?raw';
+import ExternalLinkLogo from '../assets/external-link.svg?raw';
+import { rootState } from '../state/root/state';
 ---
 
+<!-- TODO: Footer and contact me,add external link icon and github links -->
 <BaseLayout title={consts.SITE_TITLE} description={consts.SITE_DESCRIPTION}>
-  <h1>Hello</h1>
+  <div class="flex flex-col items-center w-full pt-24">
+    <!-- container -->
+    <div class="flex">
+      <div set:html={Logo} class="w-[120px] h-fit" />
+      <div class="flex flex-col pl-5">
+        <h1 class="gradient-header font-light leading-[96px] text-[96px]">Beastz</h1>
+        <hr class="gradient-line mt-4 opacity-50" />
+      </div>
+    </div>
+
+    <p class="text-stale font-bold text-4xl mt-5 text-center opacity-90">
+      High-quality open-source
+      <br />
+      software for
+
+      <span class="underline decoration-dashed decoration-primary decoration-3 underline-offset-2"
+        >web developers.</span
+      >
+    </p>
+
+    <p class="text-stale opacity-80 text-center text-lg lg:max-w-2xl mt-4">
+      Multitude of open-source web applications and some libraries, including Vault, Collaborative
+      Editing &amp; more. Made entirely by
+      <span class="inline-flex">
+        <a
+          class="text-primary flex items-center"
+          href={consts.PORTFOLIO_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span set:html={ExternalLinkLogo} class="w-4 h-fit text-primary mx-1" />
+          <span>Giorgi Kumelashvili</span>
+        </a>
+      </span>
+    </p>
+
+    <div class="px-4 lg:max-w-screen-lg md:mx-auto pt-32">
+      <h3 class="text-4xl font-light text-stale pb-2">Open Source Projects</h3>
+
+      <div class="mt-4 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+        {
+          rootState.data.map(e => (
+            <a
+              href={e.link}
+              style="z-index:0"
+              class:list={[
+                e.mainClassList,
+                'rounded-lg p-4 md:p-8 transition-all bg-white dark:bg-gray-900 dark:border dark:border-gray-800 shadow-xl dark:shadow-lg dark:text-white-400 border-2 border-transparent hover:border-current',
+              ]}
+            >
+              <div class="flex gap-2 justify-between items-center">
+                <div
+                  class="text-2xl font-extrabold"
+                  style="view-transition-name:library-name-start"
+                >
+                  {e.title}
+                </div>
+
+                {e.isSoonCompleted && (
+                  <div
+                    class:list={[
+                      e.soonClassList,
+                      'uppercase text-white rounded-full px-2 py-1 text-xs font-black animate-pulse',
+                    ]}
+                  >
+                    soon
+                  </div>
+                )}
+              </div>
+              <div class="text-lg italic font-light mt-2">{e.subHeader}</div>
+              <div class="text-sm mt-2 text-black dark:text-white">{e.description}</div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
 </BaseLayout>

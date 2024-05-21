@@ -1,9 +1,5 @@
 export const consts = {
-  SITE_TITLE: 'Portfolio',
-  SITE_DESCRIPTION: 'Welcome to my website!',
-
-  //TODO: here declare links and mention portfolio
-  // make web like this
-  // https://tanstack.com/
+  SITE_TITLE: 'Beastz',
+  SITE_DESCRIPTION: 'Welcome to beastz, openc source application bundle!',
   PORTFOLIO_LINK: 'https://portfolio.beastz.dev',
 };

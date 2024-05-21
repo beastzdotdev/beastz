@@ -8,6 +8,21 @@ https://fonts.google.com/specimen/Quicksand     (font-family: 'Quicksand', sans-
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --primary-color: #63ffda;
+  --secondary-color: #0a192f;
+  --stale: rgb(229, 231, 235);
+}
+
+$primary: var(--primary-color);
+// $primary-dark: #00cf9f;
+$secondary: var(--secondary-color);
+// $secondary-light: #080c1a;
+// $secondary-lighter: #112240;
+$stale: var(--stale);
+// $lighter-stale: transparentize($light-stale, 0.5);
+// $container-padding: 40px;
+
 * {
   margin: 0;
   padding: 0;
@@ -20,4 +35,18 @@ body {
   padding: 0;
   width: 100%;
   min-width: fit-content;
+  background-color: $secondary;
+}
+
+.gradient-header {
+  background-image: linear-gradient(to right, #00b087, #00ffe1);
+  display: inline-block;
+  color: transparent;
+  background-clip: text;
+}
+
+.gradient-line {
+  height: 4px;
+  border: none;
+  background-image: linear-gradient(to right, #00b087, #00ffe1);
 }
