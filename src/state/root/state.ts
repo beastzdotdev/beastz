@@ -27,7 +27,8 @@ export const rootState = {
     {
       title: 'Util',
       subHeader: '...',
-      description: 'Util helper tools',
+      description:
+        'Util helper tools for various activities, for example: image, video and audio compression, resize, upscale etc. Heavily inspired from <code class="text-red-500">dev-box.app</code>',
       link: 'https://utils.beastz.dev',
       githubLink: 'https://github.com/beastzdotdev/beastz-utils',
 
@@ -35,9 +36,49 @@ export const rootState = {
       mainClassList: ['shadow-red-500/20', 'dark:shadow-red-500/30', 'text-red-500'],
       soonClassList: ['bg-red-500'],
     },
+
+    //TODO: technology and text could be changed
+    {
+      title: 'Analyzer',
+      subHeader: 'Tauri, Solid, TS, Rust',
+      description:
+        'Disk space analyzer gui and some usefull tools, inspired from <code class="text-blue-500">nektony.com</code>',
+
+      // link: 'https://utils.beastz.dev',
+      // githubLink: 'https://github.com/beastzdotdev/beastz-utils',
+
+      isSoonCompleted: true,
+      mainClassList: ['shadow-blue-500/20', 'dark:shadow-blue-500/30', 'text-blue-500'],
+      soonClassList: ['bg-blue-500'],
+    },
+
+    //TODO: technology and text could be changed
+    {
+      title: 'Http Client',
+      subHeader: 'Tauri, Solid, TS, Rust',
+      description:
+        'Http client gui inspired from applications from like of <code class="text-yellow-500">Postman</code> and <code class="text-yellow-500">Insomnia</code>',
+
+      //   link: 'https://utils.beastz.dev',
+      //   githubLink: 'https://github.com/beastzdotdev/beastz-utils',
+
+      isSoonCompleted: true,
+      mainClassList: ['shadow-yellow-500/20', 'dark:shadow-yellow-500/30', 'text-yellow-500'],
+      soonClassList: ['bg-yellow-500'],
+    },
+
+    //TODO: technology and text could be changed
+    {
+      title: 'Social media',
+      subHeader: '...',
+      description:
+        'Social media web application, just making for fun to see how social media behave under the hood',
+      //   link: 'https://utils.beastz.dev',
+      //   githubLink: 'https://github.com/beastzdotdev/beastz-utils',
+
+      isSoonCompleted: true,
+      mainClassList: ['shadow-purple-500/20', 'dark:shadow-purple-500/30', 'text-purple-500'],
+      soonClassList: ['bg-purple-500'],
+    },
   ],
 };
-
-// shadow-${e.color}-500/20
-// dark:shadow-${e.color}-500/30
-// text-${e.color}-500

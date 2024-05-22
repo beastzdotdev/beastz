@@ -1,34 +1,39 @@
 ---
-import { consts } from '../consts';
-import BaseLayout from '../layout/base-layout.astro';
 import Logo from '../assets/logo.svg?raw';
+import BaseLayout from '../layout/base-layout.astro';
 import ExternalLinkLogo from '../assets/external-link.svg?raw';
+
+import { consts } from '../consts';
 import { rootState } from '../state/root/state';
+
+const currentYear = new Date().getFullYear();
 ---
 
-<!-- TODO: Footer and contact me -->
 <BaseLayout title={consts.SITE_TITLE} description={consts.SITE_DESCRIPTION}>
-  <div class="flex flex-col items-center w-full pt-24">
-    <!-- container -->
+  <div class="flex flex-col items-center w-full px-3 pt-24">
     <div class="flex">
-      <div set:html={Logo} class="w-[120px] h-fit" />
+      <div set:html={Logo} class="w-[80px] sm:w-[120px] h-fit" />
       <div class="flex flex-col pl-5">
-        <h1 class="gradient-header font-light leading-[96px] text-[96px]">Beastz</h1>
+        <h1
+          class="gradient-header font-light leading-[64px] text-[64px] sm:leading-[96px] sm:text-[96px]"
+        >
+          Beastz
+        </h1>
         <hr class="gradient-line mt-4 opacity-50" />
       </div>
     </div>
 
-    <p class="text-stale font-bold text-4xl mt-5 text-center opacity-90">
+    <p class="text-stale font-bold text-2xl sm:text-4xl mt-5 text-center opacity-90">
       High-quality open-source
       <br />
       software for
 
-      <span class="underline decoration-dashed decoration-primary decoration-3 underline-offset-2"
-        >web developers.</span
-      >
+      <span class="underline decoration-dashed decoration-primary decoration-3 underline-offset-2">
+        web developers.
+      </span>
     </p>
 
-    <p class="text-stale opacity-80 text-center text-lg lg:max-w-2xl mt-4">
+    <p class="text-stale opacity-80 text-center text-md sm:text-lg lg:max-w-2xl mt-4">
       Multitude of open-source web applications and some libraries, including Vault, Collaborative
       Editing &amp; more. Made entirely by
       <span class="inline-flex">
@@ -44,7 +49,7 @@ import { rootState } from '../state/root/state';
       </span>
     </p>
 
-    <div class="px-4 lg:max-w-screen-lg md:mx-auto pt-32">
+    <div class="lg:max-w-screen-lg md:mx-auto pt-32">
       <h3 class="text-4xl font-light text-stale pb-2">Open Source Projects</h3>
 
       <div class="mt-4 grid grid-cols-1 gap-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
@@ -57,7 +62,9 @@ import { rootState } from '../state/root/state';
               rel="noopener noreferrer"
               class:list={[
                 e.mainClassList,
-                'rounded-lg p-4 md:p-8 transition-all bg-white dark:bg-gray-900 dark:border dark:border-gray-800 shadow-xl dark:shadow-lg dark:text-white-400 border-2 border-transparent hover:border-current',
+                'rounded-lg p-4 md:p-8 transition-all bg-white dark:bg-gray-900 dark:border dark:border-gray-800',
+                'shadow-xl dark:shadow-lg dark:text-white-400 border-2 border-transparent hover:border-current',
+                'select-text',
               ]}
             >
               <div class="flex gap-2 justify-between items-center">
@@ -80,11 +87,32 @@ import { rootState } from '../state/root/state';
                 )}
               </div>
               <div class="text-lg italic font-light mt-2">{e.subHeader}</div>
-              <div class="text-sm mt-2 text-black dark:text-white">{e.description}</div>
+              <div class="text-sm mt-2 text-black dark:text-white" set:html={e.description} />
             </a>
           ))
         }
       </div>
     </div>
   </div>
+
+  <footer class="pt-40 sm:pt-80 text-white">
+    <div
+      class="flex flex-col items-start justify-center gap-4 p-8 max-w-screen-lg mx-auto text-sm bg-[#051021] shadow-xl shadow-black/10 md:rounded-t-lg"
+    >
+      <div class="flex gap-3 flex-col md:gap-6 md:flex-row">
+        <div class="w-fit">
+          <a href={consts.BLOGS_LINK}>Blogs</a>
+        </div>
+        <div>
+          <a href={consts.GITHUB_ORG_LINK} target="_blank" rel="noreferrer"> @Beastz Github </a>
+        </div>
+        <div>
+          <a href={consts.GITHUB_PROFILE_LINK} target="_blank" rel="noreferrer"> @Author Github </a>
+        </div>
+      </div>
+      <div class="text-center opacity-20">
+        © {currentYear} Beastz
+      </div>
+    </div>
+  </footer>
 </BaseLayout>
