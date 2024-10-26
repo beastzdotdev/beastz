@@ -6,7 +6,6 @@ export const rootState = {
       description:
         "The secure file storage, go to solution inspired by the user-friendliness of Google Drive, enhanced with robust features like encryption and public file sharing",
       link: "https://vault.beastz.dev",
-      githubLink: "https://github.com/beastzdotdev/beastz-vault",
 
       isSoonCompleted: false,
       mainClassList: [
@@ -22,7 +21,6 @@ export const rootState = {
       description:
         "Minimalist collaborative editing tool and document editor built with modern technologies",
       link: "https://doc.beastz.dev",
-      githubLink: "https://github.com/beastzdotdev/beastz-doc",
 
       isSoonCompleted: false,
       mainClassList: [
@@ -38,7 +36,6 @@ export const rootState = {
       description:
         'Util helper tools for various activities, for example: image, video and audio compression, resize, upscale etc. Heavily inspired from <code class="text-red-500">dev-box.app</code>',
       // link: "https://utils.beastz.dev",
-      // githubLink: "https://github.com/beastzdotdev/beastz-utils",
 
       isSoonCompleted: true,
       mainClassList: [
@@ -57,7 +54,6 @@ export const rootState = {
         'Disk space analyzer gui and some usefull tools, inspired from <code class="text-blue-500">nektony.com</code>',
 
       // link: 'https://utils.beastz.dev',
-      // githubLink: 'https://github.com/beastzdotdev/beastz-utils',
 
       isSoonCompleted: true,
       mainClassList: [
@@ -76,7 +72,6 @@ export const rootState = {
         'Http client gui inspired from applications from like of <code class="text-yellow-500">Postman</code> and <code class="text-yellow-500">Insomnia</code>',
 
       //   link: 'https://utils.beastz.dev',
-      //   githubLink: 'https://github.com/beastzdotdev/beastz-utils',
 
       isSoonCompleted: true,
       mainClassList: [
@@ -94,7 +89,6 @@ export const rootState = {
       description:
         "Social media web application, just making for fun to see how social media behave under the hood",
       //   link: 'https://utils.beastz.dev',
-      //   githubLink: 'https://github.com/beastzdotdev/beastz-utils',
 
       isSoonCompleted: true,
       mainClassList: [
