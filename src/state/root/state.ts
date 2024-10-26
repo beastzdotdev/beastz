@@ -1,46 +1,58 @@
 export const rootState = {
   data: [
     {
-      title: 'Vault',
-      subHeader: 'React, TS, Blueprint, Zod, Formik',
+      title: "Vault",
+      subHeader: "React, TS, Blueprint, Zod, Formik",
       description:
-        'The secure file storage, go to solution inspired by the user-friendliness of Google Drive, enhanced with robust features like encryption and public file sharing',
-      link: 'https://vault.beastz.dev',
-      githubLink: 'https://github.com/beastzdotdev/beastz-vault',
+        "The secure file storage, go to solution inspired by the user-friendliness of Google Drive, enhanced with robust features like encryption and public file sharing",
+      link: "https://vault.beastz.dev",
+      githubLink: "https://github.com/beastzdotdev/beastz-vault",
 
       isSoonCompleted: false,
-      mainClassList: ['shadow-cyan-500/20', 'dark:shadow-cyan-500/30', 'text-cyan-500'],
+      mainClassList: [
+        "shadow-cyan-500/20",
+        "dark:shadow-cyan-500/30",
+        "text-cyan-500",
+      ],
       soonClassList: [],
     },
     {
-      title: 'Doc',
-      subHeader: 'React, TS, Blueprint, Socket.io',
+      title: "Document",
+      subHeader: "Nextjs, TS, Shadcn, Socket.io, Tailwind",
       description:
-        'Minimalist collaborative editing tool, built with react and powered by socket.io',
-      link: 'https://doc.beastz.dev',
-      githubLink: 'https://github.com/beastzdotdev/beastz-doc',
+        "Minimalist collaborative editing tool and document editor built with modern technologies",
+      link: "https://doc.beastz.dev",
+      githubLink: "https://github.com/beastzdotdev/beastz-doc",
 
       isSoonCompleted: false,
-      mainClassList: ['shadow-emerald-500/20', 'dark:shadow-emerald-500/30', 'text-emerald-500'],
+      mainClassList: [
+        "shadow-emerald-500/20",
+        "dark:shadow-emerald-500/30",
+        "text-emerald-500",
+      ],
       soonClassList: [],
     },
     {
-      title: 'Util',
-      subHeader: '...',
+      title: "Util",
+      subHeader: "...",
       description:
         'Util helper tools for various activities, for example: image, video and audio compression, resize, upscale etc. Heavily inspired from <code class="text-red-500">dev-box.app</code>',
-      link: 'https://utils.beastz.dev',
-      githubLink: 'https://github.com/beastzdotdev/beastz-utils',
+      // link: "https://utils.beastz.dev",
+      // githubLink: "https://github.com/beastzdotdev/beastz-utils",
 
       isSoonCompleted: true,
-      mainClassList: ['shadow-red-500/20', 'dark:shadow-red-500/30', 'text-red-500'],
-      soonClassList: ['bg-red-500'],
+      mainClassList: [
+        "shadow-red-500/20",
+        "dark:shadow-red-500/30",
+        "text-red-500",
+      ],
+      soonClassList: ["bg-red-500"],
     },
 
     //TODO: technology and text could be changed
     {
-      title: 'Analyzer',
-      subHeader: 'Tauri, Solid, TS, Rust',
+      title: "Analyzer",
+      subHeader: "Tauri, Solid, TS, Rust",
       description:
         'Disk space analyzer gui and some usefull tools, inspired from <code class="text-blue-500">nektony.com</code>',
 
@@ -48,14 +60,18 @@ export const rootState = {
       // githubLink: 'https://github.com/beastzdotdev/beastz-utils',
 
       isSoonCompleted: true,
-      mainClassList: ['shadow-blue-500/20', 'dark:shadow-blue-500/30', 'text-blue-500'],
-      soonClassList: ['bg-blue-500'],
+      mainClassList: [
+        "shadow-blue-500/20",
+        "dark:shadow-blue-500/30",
+        "text-blue-500",
+      ],
+      soonClassList: ["bg-blue-500"],
     },
 
     //TODO: technology and text could be changed
     {
-      title: 'Http Client',
-      subHeader: 'Tauri, Solid, TS, Rust',
+      title: "Http Client",
+      subHeader: "Tauri, Solid, TS, Rust",
       description:
         'Http client gui inspired from applications from like of <code class="text-yellow-500">Postman</code> and <code class="text-yellow-500">Insomnia</code>',
 
@@ -63,22 +79,30 @@ export const rootState = {
       //   githubLink: 'https://github.com/beastzdotdev/beastz-utils',
 
       isSoonCompleted: true,
-      mainClassList: ['shadow-yellow-500/20', 'dark:shadow-yellow-500/30', 'text-yellow-500'],
-      soonClassList: ['bg-yellow-500'],
+      mainClassList: [
+        "shadow-yellow-500/20",
+        "dark:shadow-yellow-500/30",
+        "text-yellow-500",
+      ],
+      soonClassList: ["bg-yellow-500"],
     },
 
     //TODO: technology and text could be changed
     {
-      title: 'Social media',
-      subHeader: '...',
+      title: "Social media",
+      subHeader: "...",
       description:
-        'Social media web application, just making for fun to see how social media behave under the hood',
+        "Social media web application, just making for fun to see how social media behave under the hood",
       //   link: 'https://utils.beastz.dev',
       //   githubLink: 'https://github.com/beastzdotdev/beastz-utils',
 
       isSoonCompleted: true,
-      mainClassList: ['shadow-purple-500/20', 'dark:shadow-purple-500/30', 'text-purple-500'],
-      soonClassList: ['bg-purple-500'],
+      mainClassList: [
+        "shadow-purple-500/20",
+        "dark:shadow-purple-500/30",
+        "text-purple-500",
+      ],
+      soonClassList: ["bg-purple-500"],
     },
   ],
 };
