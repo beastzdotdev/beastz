@@ -20,7 +20,7 @@ export const rootState = {
       subHeader: "Nextjs, TS, Shadcn, Socket.io, Tailwind",
       description:
         "Minimalist collaborative editing tool and document editor built with modern technologies",
-      link: "https://doc.beastz.dev",
+      link: "https://document.beastz.dev",
 
       isSoonCompleted: false,
       mainClassList: [
